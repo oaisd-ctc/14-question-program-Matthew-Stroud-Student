@@ -98,7 +98,7 @@ public class Program
     public static void AskFavoriteTeacher()
     {
         Console.WriteLine(" ");
-        Console.WriteLine("What is your favorite teacher?");
+        Console.WriteLine("Who is your favorite teacher?");
 
         favoriteTeacher = Console.ReadLine();
     }
