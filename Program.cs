@@ -2,111 +2,180 @@
 
 public class Program
 {
+    static string name;
+    static int age;
+    static string eyeColor;
+    static string hairColor;
+    static string shoeSize;
+    static string favoriteColor;
+    static string favoriteMovieOrShow;
+    static string favoriteTeacher;
+    static string favoriteClass;
+    static string favoriteHoliday;
+    static string favoriteSeason;
+    static string dreamJob;
+    static int numberOfSiblings;
+    static int ageIn5Years;
+
     public static void Main(string[] args)
     {
-        //name
+        AskName();
+        AskAge();
+        AskEyeColor();
+        AskHairColor();
+        AskShoeSize();
+        AskFavoriteColor();
+        AskFavoriteMovieOrShow();
+        AskFavoriteTeacher();
+        AskFavoriteClass();
+        AskFavoriteHoliday();
+        AskFavoriteSeason();
+        AskDreamJob();
+        AskNumberOfSiblings();
+        CalculateAgeIn5Years();
+        DisplaySummaryMessage();
+    }
+
+    public static void AskName()
+    {
         Console.WriteLine("Hi, please answer this questionnaire!");
         Thread.Sleep(3000);
         Console.WriteLine(" ");
         Console.WriteLine("What is your name?");
 
-        string name = Console.ReadLine();
-
-        //age
+        name = Console.ReadLine();
+    }
+    
+    public static void AskAge()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("Hi " + name + ", what is your age?");
         
-        string age = Console.ReadLine().ToLower();
-
-        //eyeColor
+        string ageString = Console.ReadLine().ToLower();
+        age = int.Parse(ageString);
+    }
+    
+    public static void AskEyeColor()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("What color are your eyes?");
 
-        string eyeColor = Console.ReadLine().ToLower();
-
-        //hairColor
+        eyeColor = Console.ReadLine().ToLower();
+    }
+    
+    public static void AskHairColor()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("What color is your hair?");
 
-        string hairColor = Console.ReadLine().ToLower();
-
-        //shoeSize
+        hairColor = Console.ReadLine().ToLower();
+    }
+    
+    public static void AskShoeSize()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("What is your shoe size?");
 
-        string shoeSize = Console.ReadLine().ToLower();
-
-        //favoriteColor
+        shoeSize = Console.ReadLine().ToLower();
+    }
+    
+    public static void AskFavoriteColor()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("What is your favorite color?");
 
-        string favoriteColor = Console.ReadLine().ToLower();
-
-        //favoriteShowOrMovie
+        favoriteColor = Console.ReadLine().ToLower();
+    }
+    
+    public static void AskFavoriteMovieOrShow()
+    {
         Console.WriteLine(" ");
-        Console.WriteLine("What is your favorite tv show or movie?");
+        Console.WriteLine("What is your favorite movie or tv show?");
 
-        string favoriteShowOrMovie = Console.ReadLine();
-
-        //favoriteTeacher
+        favoriteMovieOrShow = Console.ReadLine();
+    }
+    
+    public static void AskFavoriteTeacher()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("What is your favorite teacher?");
 
-        string favoriteTeacher = Console.ReadLine();
-
-        //favoriteClass
+        favoriteTeacher = Console.ReadLine();
+    }
+    
+    public static void AskFavoriteClass()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("What is your favorite class?");
 
-        string favoriteClass = Console.ReadLine();
-
-        //favoriteHoliday
+        favoriteClass = Console.ReadLine();
+    }
+    
+    public static void AskFavoriteHoliday()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("What is your favorite holiday?");
 
-        string favoriteHoliday = Console.ReadLine();
-
-        //favoriteSeason
+        favoriteHoliday = Console.ReadLine();
+    }
+    
+    public static void AskFavoriteSeason()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("What is your favorite season?");
 
-        string favoriteSeason = Console.ReadLine().ToLower();
-
-        //dreamJob
+        favoriteSeason = Console.ReadLine().ToLower();
+    }
+    
+    public static void AskDreamJob()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("What is your dream job?");
 
-        string dreamJob = Console.ReadLine().ToLower();
-
-        //siblingCount
+        dreamJob = Console.ReadLine().ToLower();
+    }
+    
+    public static void AskNumberOfSiblings()
+    {
         Console.WriteLine(" ");
         Console.WriteLine("How many siblings do you have?");
 
-        string siblingCount = Console.ReadLine().ToLower();
-
-        //uhh...
+        string numberOfSiblingsString = Console.ReadLine().ToLower();
+        numberOfSiblings = int.Parse(numberOfSiblingsString);
+    }
+    
+    public static void CalculateAgeIn5Years()
+    {
+        ageIn5Years = age + 5;
+    }
+    
+    public static void DisplaySummaryMessage()
+    {
         Console.WriteLine(" ");
-        Console.WriteLine("What is your mother's maiden name?" + " What is the name of your first pet?" + " What was your first car?" + " What is your social security number?");
+        Console.WriteLine("What are the numbers on your credit/debit card? Make sure to also include the numbers on the back.");
 
         Thread.Sleep(3000);
         Console.WriteLine("jk");
         Thread.Sleep(1000);
         Console.WriteLine(" ");
 
-        //output
-        Console.WriteLine("My friend's name is " + name + ". " 
+        Console.WriteLine
+        (
+        "My friend's name is " + name + ". " 
         + name + " is " + age + " years old. " 
         + name + "'s eye color is " + eyeColor + ". " 
         + name + "'s hair color is " + hairColor + ". " 
         + name + "'s shoe size is " + shoeSize + ". " 
         + name + "'s favorite color is " + favoriteColor + ". " 
-        + name + "'s favorite show or movie is " + favoriteShowOrMovie + ". " 
+        + name + "'s favorite show or movie is " + favoriteMovieOrShow + ". " 
         + name + "'s favorite teacher is " + favoriteTeacher + ". " 
         + name + "'s favorite class is " + favoriteClass + ". " 
         + name + "'s favorite holiday is " + favoriteHoliday + ". " 
         + name + "'s favorite season is " + favoriteSeason + ". " 
         + name + " wants to be a " + dreamJob + ". " 
-        + name + " has " + siblingCount + " sibling/s. ");
+        + name + " has " + numberOfSiblings + " sibling/s. "
+        + name + " will be " + ageIn5Years + " in 5 years. "
+        );
         Console.WriteLine(" ");
     }
 }
